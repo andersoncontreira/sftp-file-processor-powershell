@@ -42,6 +42,12 @@ Execute the follow command:
 ```
 pwsh ./sftp-file-processor.ps1 -h
 ```
+
+### To execute uploads in a test folder
+```
+pwsh ./sftp-file-processor.ps1 -Source ./test-folder/ -SFTPHost 10.1.1.123 -SFTPUser root -SFTPPassword pass -QATest 0
+```
+
 ### To upload a single file
 Execute the follow command:
 ```
@@ -52,6 +58,8 @@ Execute the follow command:
 ```
 pwsh ./sftp-file-processor.ps1 -Source ./test-folder/ -SFTPHost 10.1.1.123 -SFTPUser root -SFTPPassword pass
 ```
+
+
 
 ## Program details
 
