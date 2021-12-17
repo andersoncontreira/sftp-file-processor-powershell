@@ -121,7 +121,7 @@ function Initialize
         }
 
     } else {
-        Write-Error "Source must be informad, it can be a folder path or file path! Example: sftp-file-processor.ps1 test-file.txt"
+        Write-Error "Source must be informed, it can be a folder path or file path! Example: sftp-file-processor.ps1 test-file.txt"
         
     }
 
