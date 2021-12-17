@@ -53,9 +53,9 @@ Execute the follow command:
 pwsh ./sftp-file-processor.ps1 -Source ./test-folder/ -SFTPHost 10.1.1.123 -SFTPUser root -SFTPPassword pass
 ```
 
-### Parameters
-List of program params:
-hird-Party software       |   Value/Type | Example             | Description
+## Program details
+
+Parameters                |   Value/Type | Example             | Description
 --------------------------|--------------|---------------------|------------------------------------------
 **Main params**           |              |                     |  
 -Source                   | String       | ./test-file.txt     | File or folder that will be the source 
