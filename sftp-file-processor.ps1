@@ -8,15 +8,25 @@ param(
     [string]$SFTPProdPath = "/home/oracle/mastersaf/msafdb",
     [string]$SFTPQAPath = "/home/oracle/mastersaf/msaf",
     # Flags
-    [bool]$AutoConfirm = 1,
-    [bool]$QATest = 0
+    [int]$AutoConfirm = 1,
+    [int]$QATest = 0
 )
 
 # Script variables
 $ScriptName = "sftp-file-processor"
 $ScriptVersion = "1.0.0"
 
+try {
+  $AutoConfirm = [System.Convert]::ToBoolean($AutoConfirm) 
+} catch [FormatException] {
+  $AutoConfirm = 1
+}
 
+try {
+  $QATest = [System.Convert]::ToBoolean($QATest) 
+} catch [FormatException] {
+  $QATest = 0
+}
 
 
 $FileList = [System.Collections.ArrayList]::new()
