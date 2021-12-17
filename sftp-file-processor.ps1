@@ -9,7 +9,7 @@ param(
     [string]$SFTPQAPath = "/home/oracle/mastersaf/msaf",
     # Flags
     [bool]$AutoConfirm = 1,
-    [bool]$QATest = 1
+    [bool]$QATest = 0
 )
 
 # Script variables
@@ -276,7 +276,7 @@ function Help
     Write-Host ""
     Write-Host "example: ./sftp-file-processor.ps1 -Source ./test-file.txt -SFTPHost 10.1.1.123 -SFTPUser root -SFTPPassword ******** -AutoConfirm 0"
     Write-Host ""
-    Write-Host "-Source                     Print this help screen"
+    Write-Host "-Source                     File or folder that will be the source"
     Write-Host "-SFTPHost                   Host to connect"
     Write-Host "-SFTPUser                   User to connect"
     Write-Host "-SFTPPassword               Password to connect"

@@ -24,12 +24,9 @@ sudo dpkg -i packages-microsoft-prod.deb
 #### All
 Execute the follow command:
 ```
- 1977  apt-get update
- 1978  sudo apt-get update
- 1979  add-apt-repository universe
- 1980  sudo add-apt-repository universe
- 1981  apt-get install -y powershell
- 1982  sudo apt-get install -y powershell
+ sudo apt-get update
+ sudo add-apt-repository universe
+ sudo apt-get install -y powershell
 ```
 
 ### Putty 
@@ -40,6 +37,11 @@ sudo apt install putty-tools
 
 ## Running the script
 
+### Getting help
+Execute the follow command:
+```
+pwsh ./sftp-file-processor.ps1 -h
+```
 ### To upload a single file
 Execute the follow command:
 ```
@@ -50,3 +52,22 @@ Execute the follow command:
 ```
 pwsh ./sftp-file-processor.ps1 -Source ./test-folder/ -SFTPHost 10.1.1.123 -SFTPUser root -SFTPPassword pass
 ```
+
+### Parameters
+List of program params:
+hird-Party software       |   Value/Type | Example             | Description
+--------------------------|--------------|---------------------|------------------------------------------
+**Main params**           |              |                     |  
+-Source                   | String       | ./test-file.txt     | File or folder that will be the source 
+-SFTPHost                 | String       | 10.1.1.123          | Host to connect
+-SFTPUser                 | String       | root                | User to connect
+-SFTPPassword             | String       | somepass            | Password to connect
+-SFTPProdPath             | String       | /home/prod/target   | Production target path
+-SFTPQAPath               | String       | /home/test/target   | Test target path
+**Control flags**         |              |                     |
+-AutoConfirm              | Integer      | 1                   | Define if the script must auto confirm the programs request
+-QATest                   | Integer      | 1                   | Define if the script must appoint to the test target
+**Info params**           |              |                     |
+-h                        | void         |                     | Print the help screen
+-v                        | void         |                     | Print version info          
+    
